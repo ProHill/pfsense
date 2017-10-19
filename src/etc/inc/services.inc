@@ -129,7 +129,7 @@ function services_radvd_configure($blacklist = array()) {
 
 		$mtu = get_interface_mtu($realif);
 		if (is_numeric($mtu)) {
-			$radvdconf .= "\tAdvLinkMTU {$mtu};\n";
+			$radvdconf .= "\tAdvLinkMTU 1472;\n";
 		} else {
 			$radvdconf .= "\tAdvLinkMTU 1280;\n";
 		}
@@ -343,7 +343,7 @@ function services_radvd_configure($blacklist = array()) {
 		}
 		$mtu = get_interface_mtu($realif);
 		if (is_numeric($mtu)) {
-			$radvdconf .= "\tAdvLinkMTU {$mtu};\n";
+			$radvdconf .= "\tAdvLinkMTU 1472;\n";
 		} else {
 			$radvdconf .= "\tAdvLinkMTU 1280;\n";
 		}
